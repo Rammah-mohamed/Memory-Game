@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.starting {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(13 100 92 / 80%);
+    z-index: 2;
+    margin-top: -15px;
+}
+.starting .cat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    background-color: #0075ff;
+    margin: 20px auto;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.starting .cat p {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 26px;
+    user-select: none;
+}
+.starting .cat span {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #e91e63;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+.starting .cat span:hover {
+    background-color: #a40d3f;
+}
+.starting .lvl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    background-color: #0075ff;
+    margin: 20px auto;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.starting .lvl p {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 26px;
+    user-select: none;
+}
+.starting .lvl span {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #e91e63;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+.starting .lvl span:hover {
+    background-color: #a40d3f;
+}
+.starting .start {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0075ff;
+    border-radius: 5px;
+}
+.starting .start input {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    font-size: 20px;
+    caret-color: #e91e63;
+}
+.starting .start input:focus {
+    outline: 2px solid #e91e63;
+}
+.starting .start .start-button {
+    margin: 15px auto;
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    font-size: 24px;
+    background-color: #e91e63;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+.info {
+    width: 1080px;
+    margin: 15px auto;
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid #e91e63;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    background-color: #0075ff;
+}
+.game-blocks {
+    width: 1100px;
+    height: calc(100vh - 70px);
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.game-blocks span {
+    background-color: #e91e63;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid #0075ff;
+    animation: bounce 1s infinite linear;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+.game-blocks .game-block {
+    height: 200px;
+    flex: 1 0 200px;
+    cursor: pointer;
+    margin: 0 10px 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+    position: relative;
+}
+.game-blocks .game-block.is-flipped, 
+.game-blocks .game-block.match {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.game-blocks .game-block .back {
+    background-color: #0075ff;
+    border: 5px solid #e91e63;
+    transform: rotateY(180deg);
+    
+}
+.game-blocks .game-block .back img {
+    width: 190px;
+}
+.game-blocks .game-block .front {
+    background-color: #e91e63;
+    border: 5px solid #0075ff;
+    line-height: 200px;
+}
+.game-blocks .game-block .front::before {
+    content: "!";
+    font-weight: bold;
+    font-size: 140px;
+    color: white;
+}
+.game-blocks .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+}
+

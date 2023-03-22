@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <div class="starting">
+        <div class="cat">
+            <p>Select Game Gategory</p>
+            <span data-cat="Sport">Sport</span>
+            <span data-cat="Animal">Animal</span>
+            <span data-cat="Cartoon">Cartoon</span>
+        </div>
+        <div class="lvl">
+            <p>Select Game Level</p>
+            <span data-lvl="easy">Easy</span>
+            <span data-lvl="normal">Normal</span>
+            <span data-lvl="hard">Hard</span>
+        </div>
+        <div class="start">
+            <input type="text" name="userName" placeholder="Enter User Name">
+            <button class="start-button">Start Playing</button>
+        </div>
+    </div>
+    <div class="info">
+        <div class="userName">User is: <span></span></div>
+        <div class="info-lvl">Level: <span></span></div>
+        <div class="info-cat">Category: <span></span></div>
+        <div class="timer"><span class="min"></span>:<span class="sec">05</span></div>
+        <div class="tries">tries Number : <span>0</span></div>
+    </div>
+    <div class="game-blocks">
+        <div class="game-block" data-match="a1">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 1.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a1">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 1.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a2">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 2.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a2">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 2.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a3">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 3.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a3">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 3.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a4">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 4.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a4">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 4.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a5">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 5.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a5">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 5.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a6">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 6.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a6">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 6.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a7">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 7.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a7">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 7.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a8">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 8.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a8">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 8.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a9">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 9.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a9">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 9.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a10">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 10.jpg" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-match="a10">
+            <div class="front face"></div>
+            <div class="back face">
+                <img src="imgs/Animal 10.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="music">
+        <audio class="fail" src="Sound/fail.mp3" preload="auto"></audio>
+        <audio class="success" src="Sound/success.mp3" preload="auto"></audio>
+        <audio class="background-music" src="Sound/Backgroung Music.mp3" preload="auto" loop></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
